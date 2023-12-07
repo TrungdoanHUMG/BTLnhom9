@@ -1,0 +1,42 @@
+@model FirstWebMVC.Models.DanhSachCongNhan
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>DanhSachCongNhan</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Vitri)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Vitri)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Luong)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Luong)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Trangthai)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Trangthai)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.MaNV">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

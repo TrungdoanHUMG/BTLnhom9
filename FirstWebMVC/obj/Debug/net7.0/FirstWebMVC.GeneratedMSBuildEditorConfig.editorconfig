@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\BTLnhom9\FirstWebMVC
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/BTLnhom9/FirstWebMVC/Views/DanhSachCongNhan/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuaFNhY2hDb25nTmhhblxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/BTLnhom9/FirstWebMVC/Views/DanhSachCongNhan/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuaFNhY2hDb25nTmhhblxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/BTLnhom9/FirstWebMVC/Views/DanhSachCongNhan/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuaFNhY2hDb25nTmhhblxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/BTLnhom9/FirstWebMVC/Views/DanhSachCongNhan/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuaFNhY2hDb25nTmhhblxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/BTLnhom9/FirstWebMVC/Views/DanhSachCongNhan/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuaFNhY2hDb25nTmhhblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/BTLnhom9/FirstWebMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
