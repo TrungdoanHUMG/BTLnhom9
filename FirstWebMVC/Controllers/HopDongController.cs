@@ -10,87 +10,87 @@ using FirstWebMVC.Models;
 
 namespace FirstWebMVC.Controllers
 {
-    public class DanhSachCongNhanController : Controller
+    public class HopDongController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public DanhSachCongNhanController(ApplicationDbContext context)
+        public HopDongController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: DanhSachCongNhan
+        // GET: HopDong
         public async Task<IActionResult> Index()
         {
-              return _context.DanhSachCongNhan != null ? 
-                          View(await _context.DanhSachCongNhan.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.DanhSachCongNhan'  is null.");
+              return _context.HopDong != null ? 
+                          View(await _context.HopDong.ToListAsync()) :
+                          Problem("Entity set 'ApplicationDbContext.HopDong'  is null.");
         }
 
-        // GET: DanhSachCongNhan/Details/5
+        // GET: HopDong/Details/5
         public async Task<IActionResult> Details(string id)
         {
-            if (id == null || _context.DanhSachCongNhan == null)
+            if (id == null || _context.HopDong == null)
             {
                 return NotFound();
             }
 
-            var danhSachCongNhan = await _context.DanhSachCongNhan
-                .FirstOrDefaultAsync(m => m.MaNV == id);
-            if (danhSachCongNhan == null)
+            var hopDong = await _context.HopDong
+                .FirstOrDefaultAsync(m => m.HopDongID == id);
+            if (hopDong == null)
             {
                 return NotFound();
             }
 
-            return View(danhSachCongNhan);
+            return View(hopDong);
         }
 
-        // GET: DanhSachCongNhan/Create
+        // GET: HopDong/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: DanhSachCongNhan/Create
+        // POST: HopDong/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaNV,FullName,Vitri,Luong,Trangthai")] DanhSachCongNhan danhSachCongNhan)
+        public async Task<IActionResult> Create([Bind("HopDongID,TimeHopDong")] HopDong hopDong)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(danhSachCongNhan);
+                _context.Add(hopDong);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(danhSachCongNhan);
+            return View(hopDong);
         }
 
-        // GET: DanhSachCongNhan/Edit/5
+        // GET: HopDong/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
-            if (id == null || _context.DanhSachCongNhan == null)
+            if (id == null || _context.HopDong == null)
             {
                 return NotFound();
             }
 
-            var danhSachCongNhan = await _context.DanhSachCongNhan.FindAsync(id);
-            if (danhSachCongNhan == null)
+            var hopDong = await _context.HopDong.FindAsync(id);
+            if (hopDong == null)
             {
                 return NotFound();
             }
-            return View(danhSachCongNhan);
+            return View(hopDong);
         }
 
-        // POST: DanhSachCongNhan/Edit/5
+        // POST: HopDong/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaNV,FullName,Vitri,Luong,Trangthai")] DanhSachCongNhan danhSachCongNhan)
+        public async Task<IActionResult> Edit(string id, [Bind("HopDongID,TimeHopDong")] HopDong hopDong)
         {
-            if (id != danhSachCongNhan.MaNV)
+            if (id != hopDong.HopDongID)
             {
                 return NotFound();
             }
@@ -99,12 +99,12 @@ namespace FirstWebMVC.Controllers
             {
                 try
                 {
-                    _context.Update(danhSachCongNhan);
+                    _context.Update(hopDong);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DanhSachCongNhanExists(danhSachCongNhan.MaNV))
+                    if (!HopDongExists(hopDong.HopDongID))
                     {
                         return NotFound();
                     }
@@ -115,49 +115,49 @@ namespace FirstWebMVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(danhSachCongNhan);
+            return View(hopDong);
         }
 
-        // GET: DanhSachCongNhan/Delete/5
+        // GET: HopDong/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
-            if (id == null || _context.DanhSachCongNhan == null)
+            if (id == null || _context.HopDong == null)
             {
                 return NotFound();
             }
 
-            var danhSachCongNhan = await _context.DanhSachCongNhan
-                .FirstOrDefaultAsync(m => m.MaNV == id);
-            if (danhSachCongNhan == null)
+            var hopDong = await _context.HopDong
+                .FirstOrDefaultAsync(m => m.HopDongID == id);
+            if (hopDong == null)
             {
                 return NotFound();
             }
 
-            return View(danhSachCongNhan);
+            return View(hopDong);
         }
 
-        // POST: DanhSachCongNhan/Delete/5
+        // POST: HopDong/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.DanhSachCongNhan == null)
+            if (_context.HopDong == null)
             {
-                return Problem("Entity set 'ApplicationDbContext.DanhSachCongNhan'  is null.");
+                return Problem("Entity set 'ApplicationDbContext.HopDong'  is null.");
             }
-            var danhSachCongNhan = await _context.DanhSachCongNhan.FindAsync(id);
-            if (danhSachCongNhan != null)
+            var hopDong = await _context.HopDong.FindAsync(id);
+            if (hopDong != null)
             {
-                _context.DanhSachCongNhan.Remove(danhSachCongNhan);
+                _context.HopDong.Remove(hopDong);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool DanhSachCongNhanExists(string id)
+        private bool HopDongExists(string id)
         {
-          return (_context.DanhSachCongNhan?.Any(e => e.MaNV == id)).GetValueOrDefault();
+          return (_context.HopDong?.Any(e => e.HopDongID == id)).GetValueOrDefault();
         }
     }
 }

@@ -1,0 +1,101 @@
+@model IEnumerable<FirstWebMVC.Models.Ceo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CeoName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CeoPhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CeoAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CeoBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CeoSex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CeoBank)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CeoCCCD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ViTriCeoID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Luong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HopDong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CeoStart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CeoEnd)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CeoName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CeoPhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CeoAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CeoBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CeoSex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CeoBank)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CeoCCCD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViTriCeoID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Luong.LuongID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HopDong.HopDongID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CeoStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CeoEnd)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CeoID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CeoID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CeoID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

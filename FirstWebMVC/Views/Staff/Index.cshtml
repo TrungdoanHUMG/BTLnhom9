@@ -1,0 +1,101 @@
+@model IEnumerable<FirstWebMVC.Models.Staff>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffPhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffSex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffBank)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffCCCD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffViTri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Luong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HopDong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffStart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffEnd)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffPhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffSex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffBank)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffCCCD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffViTri.ViTriStaffID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Luong.LuongID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HopDong.HopDongID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffEnd)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.StaffID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.StaffID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.StaffID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

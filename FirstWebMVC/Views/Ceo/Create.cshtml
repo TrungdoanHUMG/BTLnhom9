@@ -1,0 +1,91 @@
+@model FirstWebMVC.Models.Ceo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Ceo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CeoID" class="control-label"></label>
+                <input asp-for="CeoID" class="form-control" />
+                <span asp-validation-for="CeoID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CeoName" class="control-label"></label>
+                <input asp-for="CeoName" class="form-control" />
+                <span asp-validation-for="CeoName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CeoPhoneNumber" class="control-label"></label>
+                <input asp-for="CeoPhoneNumber" class="form-control" />
+                <span asp-validation-for="CeoPhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CeoAddress" class="control-label"></label>
+                <input asp-for="CeoAddress" class="form-control" />
+                <span asp-validation-for="CeoAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CeoBirth" class="control-label"></label>
+                <input asp-for="CeoBirth" class="form-control" />
+                <span asp-validation-for="CeoBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CeoSex" class="control-label"></label>
+                <input asp-for="CeoSex" class="form-control" />
+                <span asp-validation-for="CeoSex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CeoBank" class="control-label"></label>
+                <input asp-for="CeoBank" class="form-control" />
+                <span asp-validation-for="CeoBank" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CeoCCCD" class="control-label"></label>
+                <input asp-for="CeoCCCD" class="form-control" />
+                <span asp-validation-for="CeoCCCD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ViTriCeoID" class="control-label"></label>
+                <input asp-for="ViTriCeoID" class="form-control" />
+                <span asp-validation-for="ViTriCeoID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LuongID" class="control-label"></label>
+                <select asp-for="LuongID" class ="form-control" asp-items="ViewBag.LuongID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="HopDongID" class="control-label"></label>
+                <select asp-for="HopDongID" class ="form-control" asp-items="ViewBag.HopDongID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CeoStart" class="control-label"></label>
+                <input asp-for="CeoStart" class="form-control" />
+                <span asp-validation-for="CeoStart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CeoEnd" class="control-label"></label>
+                <input asp-for="CeoEnd" class="form-control" />
+                <span asp-validation-for="CeoEnd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

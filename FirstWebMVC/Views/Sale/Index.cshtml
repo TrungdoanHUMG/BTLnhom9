@@ -1,0 +1,107 @@
+@model IEnumerable<FirstWebMVC.Models.Sale>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Danh sách nhân viên</h1>
+
+<p>
+    <a asp-action="Create">Thêm mới nhân viên</a>
+</p>
+<form asp-controller="Sale" asp-action="Index">
+    <p>
+        Tìm kiếm: <input type="text" name="SearchString" />
+        <input type="submit" value="Lọc" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SalePhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleSex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleBank)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleCCCD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleViTri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Luong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HopDong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleStart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleEnd)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalePhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleSex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleBank)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleCCCD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleViTri.ViTriSaleID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Luong.LuongID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HopDong.HopDongID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleEnd)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SaleID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SaleID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SaleID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

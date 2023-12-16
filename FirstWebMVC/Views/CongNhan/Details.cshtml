@@ -1,4 +1,4 @@
-@model FirstWebMVC.Models.DanhSachCongNhan
+@model FirstWebMVC.Models.CongNhan
 
 @{
     ViewData["Title"] = "Details";
@@ -7,20 +7,20 @@
 <h1>Details</h1>
 
 <div>
-    <h4>DanhSachCongNhan</h4>
+    <h4>CongNhan</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FullName)
+            @Html.DisplayNameFor(model => model.PhongBan)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FullName)
+            @Html.DisplayFor(model => model.PhongBan)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Vitri)
+            @Html.DisplayNameFor(model => model.ViTri)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Vitri)
+            @Html.DisplayFor(model => model.ViTri)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Luong)
@@ -29,14 +29,14 @@
             @Html.DisplayFor(model => model.Luong)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Trangthai)
+            @Html.DisplayNameFor(model => model.TrangThai)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Trangthai)
+            @Html.DisplayFor(model => model.TrangThai)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.MaNV">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.MaCongNhan">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
