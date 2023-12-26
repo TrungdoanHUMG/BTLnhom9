@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K28KKqiHFDWJYi9kmd5/UL1b4eApWKWTjbyY1wQchM9WLKCK8FZIUrzOL5L61TpR5nkm6Qox/dXdBoJjGJdLMQ==",
+  "dgSpecHash": "3AWjU2LXKI0XkUma+LHYT0fujGdBRkT7A2wecXMCbs2B4C0cTG+GbmvgTOQTii5FgHU81ayMF42yy3FaP34emQ==",
   "success": true,
-  "projectFilePath": "D:\\BTL_PTPMQL\\FirstWebMVC\\FirstWebMVC.csproj",
+  "projectFilePath": "D:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Trung Doan\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Trung Doan\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

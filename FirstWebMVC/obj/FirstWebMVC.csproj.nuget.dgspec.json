@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BTL_PTPMQL\\FirstWebMVC\\FirstWebMVC.csproj": {}
+    "D:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj": {}
   },
   "projects": {
-    "D:\\BTL_PTPMQL\\FirstWebMVC\\FirstWebMVC.csproj": {
+    "D:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BTL_PTPMQL\\FirstWebMVC\\FirstWebMVC.csproj",
+        "projectUniqueName": "D:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj",
         "projectName": "FirstWebMVC",
-        "projectPath": "D:\\BTL_PTPMQL\\FirstWebMVC\\FirstWebMVC.csproj",
+        "projectPath": "D:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj",
         "packagesPath": "C:\\Users\\Trung Doan\\.nuget\\packages\\",
-        "outputPath": "D:\\BTL_PTPMQL\\FirstWebMVC\\obj\\",
+        "outputPath": "D:\\BTLnhom9\\FirstWebMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Trung Doan\\AppData\\Roaming\\NuGet\\NuGet.Config"

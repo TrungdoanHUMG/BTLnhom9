@@ -21,7 +21,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.CeoAddress)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.CeoBirth)
             </th>
             <th>
@@ -35,7 +35,7 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ViTriCeoID)
-            </th>
+            </th> *@
             <th>
                 @Html.DisplayNameFor(model => model.Luong)
             </th>
@@ -91,9 +91,9 @@
                 @Html.DisplayFor(modelItem => item.CeoEnd)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.CeoID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CeoID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.CeoID">Delete</a>
+                <a asp-action="Details" asp-route-id="@item.CeoID">Thông tin</a> |
+                <a asp-action="Edit" asp-route-id="@item.CeoID">Cập nhật</a> |
+                <a asp-action="Delete" asp-route-id="@item.CeoID">Xóa</a>
             </td>
         </tr>
 }
