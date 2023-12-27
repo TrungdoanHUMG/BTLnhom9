@@ -12149,19 +12149,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\trung\\.nuget\\packages\\": {}
+    "C:\\Users\\Trung Doan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj",
+      "projectUniqueName": "D:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj",
       "projectName": "FirstWebMVC",
-      "projectPath": "C:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj",
-      "packagesPath": "C:\\Users\\trung\\.nuget\\packages\\",
-      "outputPath": "C:\\BTLnhom9\\FirstWebMVC\\obj\\",
+      "projectPath": "D:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj",
+      "packagesPath": "C:\\Users\\Trung Doan\\.nuget\\packages\\",
+      "outputPath": "D:\\BTLnhom9\\FirstWebMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\trung\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Trung Doan\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"

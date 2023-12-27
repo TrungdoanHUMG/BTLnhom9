@@ -860,3 +860,7 @@ C:\BTLnhom9\FirstWebMVC\bin\Debug\net7.0\JetBrains.Annotations.dll
 C:\BTLnhom9\FirstWebMVC\bin\Debug\net7.0\X.PagedList.dll
 C:\BTLnhom9\FirstWebMVC\bin\Debug\net7.0\X.PagedList.Mvc.Core.dll
 C:\BTLnhom9\FirstWebMVC\obj\Debug\net7.0\FirstWebMVC.MvcApplicationPartsAssemblyInfo.cs
+D:\BTLnhom9\FirstWebMVC\bin\Debug\net7.0\JetBrains.Annotations.dll
+D:\BTLnhom9\FirstWebMVC\bin\Debug\net7.0\X.PagedList.dll
+D:\BTLnhom9\FirstWebMVC\bin\Debug\net7.0\X.PagedList.Mvc.Core.dll
+D:\BTLnhom9\FirstWebMVC\obj\Debug\net7.0\FirstWebMVC.MvcApplicationPartsAssemblyInfo.cs

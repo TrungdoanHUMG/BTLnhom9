@@ -4,39 +4,42 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Danh sách nhân viên</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Thêm mới nhân viên</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CeoName)
+                @Html.DisplayNameFor(model => model.CeoID)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.CeoName)
+            </th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.CeoPhoneNumber)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CeoAddress)
             </th>
-            @* <th>
+            <th>
                 @Html.DisplayNameFor(model => model.CeoBirth)
-            </th>
+            </th> *@
             <th>
                 @Html.DisplayNameFor(model => model.CeoSex)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.CeoBank)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CeoCCCD)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ViTriCeoID)
+            </th>  *@
+            @* <th>
+                @Html.DisplayNameFor(model => model.CeoViTriID)
             </th> *@
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.Luong)
             </th>
             <th>
@@ -47,7 +50,7 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CeoEnd)
-            </th>
+            </th> *@
             <th></th>
         </tr>
     </thead>
@@ -55,9 +58,12 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.CeoName)
+                @Html.DisplayFor(modelItem => item.CeoID)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.CeoName)
+            </td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.CeoPhoneNumber)
             </td>
             <td>
@@ -65,31 +71,31 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CeoBirth)
-            </td>
+            </td> *@
             <td>
                 @Html.DisplayFor(modelItem => item.CeoSex)
             </td>
-            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.CeoBank)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CeoCCCD)
+            </td>  *@
+            @* <td>
+                @Html.DisplayFor(modelItem => item.CeoViTri.VitriCeo)
+            </td> *@
+            @* <td>
+                @Html.DisplayFor(modelItem => item.Luong.SoLuong)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ViTriCeoID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Luong.LuongID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HopDong.HopDongID)
+                @Html.DisplayFor(modelItem => item.HopDong.TimeHopDong)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CeoStart)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CeoEnd)
-            </td>
+            </td> *@
             <td>
                 <a asp-action="Details" asp-route-id="@item.CeoID">Thông tin</a> |
                 <a asp-action="Edit" asp-route-id="@item.CeoID">Cập nhật</a> |
