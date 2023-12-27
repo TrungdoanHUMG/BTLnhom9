@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj": {}
+    "C:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj": {}
   },
   "projects": {
-    "D:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj": {
+    "C:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj",
+        "projectUniqueName": "C:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj",
         "projectName": "FirstWebMVC",
-        "projectPath": "D:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj",
-        "packagesPath": "C:\\Users\\Trung Doan\\.nuget\\packages\\",
-        "outputPath": "D:\\BTLnhom9\\FirstWebMVC\\obj\\",
+        "projectPath": "C:\\BTLnhom9\\FirstWebMVC\\FirstWebMVC.csproj",
+        "packagesPath": "C:\\Users\\trung\\.nuget\\packages\\",
+        "outputPath": "C:\\BTLnhom9\\FirstWebMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Trung Doan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\trung\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -65,6 +65,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[7.0.11, )"
+            },
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[8.4.7, )"
             }
           },
           "imports": [

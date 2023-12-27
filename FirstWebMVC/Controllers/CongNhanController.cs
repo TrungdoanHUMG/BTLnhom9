@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using FirstWebMVC.Data;
 using FirstWebMVC.Models;
 using FirstWebMVC.Models.Process;
+using OfficeOpenXml;
+using X.PagedList;
 
 namespace FirstWebMVC.Controllers
 {
@@ -21,13 +23,29 @@ namespace FirstWebMVC.Controllers
         }
         private ExcelProcess _excelProcess = new ExcelProcess();
         // GET: CongNhan
-        public async Task<IActionResult> Index()
+        // public async Task<IActionResult> Index()
+        // {
+        //       return _context.CongNhan != null ? 
+        //                   View(await _context.CongNhan.ToListAsync()) :
+        //                   Problem("Entity set 'ApplicationDbContext.CongNhan'  is null.");
+        // }
+          public async Task<IActionResult> Index(int? page, int? PageSize)
         {
-              return _context.CongNhan != null ? 
-                          View(await _context.CongNhan.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.CongNhan'  is null.");
-        }
+            ViewBag.PageSize = new List<SelectListItem>()
+                {
+                    new SelectListItem() { Value="3", Text="3"},
+                    new SelectListItem() { Value="5", Text="5"},
+                    new SelectListItem() { Value="10", Text="10"},
+                    new SelectListItem() { Value="15", Text="15"},
+                    new SelectListItem() { Value="25", Text="25"},
 
+                };
+                int pagesize = (PageSize ?? 3);
+                ViewBag.psize = PageSize;
+                var model = _context.CongNhan.ToList().ToPagedList(page ?? 1, pagesize);
+                return View(model);
+                         
+        }
         // GET: CongNhan/Details/5
         public async Task<IActionResult> Details(string id)
         {
@@ -195,7 +213,7 @@ namespace FirstWebMVC.Controllers
                             hd.TrangThai = dt.Rows[i][4].ToString();
                             //add oject to context
                             _context.CongNhan.Add(hd);
-                        }
+                        } 
                         //save to database
                         await _context.SaveChangesAsync();
                         return RedirectToAction(nameof(Index));
@@ -204,6 +222,24 @@ namespace FirstWebMVC.Controllers
             }
             return View();
         }
+           public IActionResult Download()
+        {
+            var fileName = "CongNhan.xlsx";
+            using(ExcelPackage excelPackage = new ExcelPackage())
+            {
+                ExcelWorksheet excelWorksheet = excelPackage.Workbook.Worksheets.Add("Sheet 1");
+                excelWorksheet.Cells["A1"].Value = "MaCongNhan";
+                excelWorksheet.Cells["B1"].Value = "PhongBan";
+                excelWorksheet.Cells["C1"].Value = "ViTri";
+                excelWorksheet.Cells["D1"].Value = "Luong";
+                excelWorksheet.Cells["E1"].Value ="TrangThai";
+                var psList = _context.CongNhan.ToList();
+                excelWorksheet.Cells["A2"].LoadFromCollection(psList);
+                var stream = new MemoryStream(excelPackage.GetAsByteArray());
+                return File(stream,"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",fileName);
+            }
+        }  
+           
         private bool CongNhanExists(string id)
         {
           return (_context.CongNhan?.Any(e => e.MaCongNhan == id)).GetValueOrDefault();
